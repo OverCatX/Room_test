@@ -1,5 +1,5 @@
 <?php
-    include "api/connect.php";
+    //include "api/connect.php";
 ?>
 
 <!DOCTYPE html>
