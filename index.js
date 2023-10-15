@@ -19,6 +19,7 @@ const obj = {
         type: "Premium"
     }
 };
+
 $(document).ready(() => {
     // room = obj.result
     var html = '';
@@ -30,7 +31,7 @@ $(document).ready(() => {
                             <img src="./img/${obj[room_name].img}.jpg" class="card-img-top" style="width: 260px; height: 200px;">
                             <h2 class="card-title">${obj[room_name].name}</h2>
                             <p>ราคา: ${obj[room_name].price}</p>
-                            <input type="submit" class="btn btn-outline-primary" value="Book Now!">
+                            <input type="submit" onclick="redirect()" class="btn btn-outline-primary" value="Book Now!">
                         </div>
                     </div>
                 </div>
@@ -51,7 +52,7 @@ function searchRoom(type) {
                             <img src="./img/${obj[room_name].img}.jpg" class="card-img-top" style="width: 260px; height: 200px;">
                             <h2 class="card-title">${obj[room_name].name}</h2>
                             <p>ราคา: ${obj[room_name].price}</p>
-                            <input type="submit" class="btn btn-outline-primary" value="Book Now!">
+                            <input type="submit" onclick="redirect()" class="btn btn-outline-primary" value="Book Now!">
                         </div>
                     </div>
                 </div>
@@ -64,7 +65,9 @@ function searchRoom(type) {
         $("#roomlist").html(html);
     }
 }
-
+function redirect(){
+    window.location.href = "https://www.instagram.com/pee_pathomkit/"
+}
 function selectType(type) {
     var html = '';
     for (let room_name in obj) {
@@ -75,7 +78,7 @@ function selectType(type) {
                             <img src="./img/${obj[room_name].img}.jpg" class="card-img-top" style="width: 260px; height: 200px;">
                             <h2 class="card-title">${obj[room_name].name}</h2>
                             <p>ราคา: ${obj[room_name].price}</p>
-                            <input type="submit" class="btn btn-outline-primary" value="Book Now!">
+                            <input type="submit" onclick="redirect()" class="btn btn-outline-primary" value="Book Now!">
                         </div>
                     </div>
                 </div>
